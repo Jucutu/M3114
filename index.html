@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебные материалы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1 id="home-link">Учебные материалы</h1>
+            <button id="theme-toggle" class="theme-btn">🌓</button>
+        </div>
+        <nav class="container">
+            <ul class="nav-links">
+                <li><a href="#" data-tab="home" class="active">Главная</a></li>
+                <li><a href="#" data-tab="math">Матан</a></li>
+                <li><a href="#" data-tab="algorithms">Алгосы</a></li>
+                <li><a href="#" data-tab="discrete">Дискра</a></li>
+                <li><a href="#" data-tab="programming">Прога</a></li>
+                <li><a href="#" data-tab="arch">АрхЭВМ</a></li>
+                <li><a href="#" data-tab="special">Спец. разделы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Главная страница -->
+        <section id="home" class="tab-content active">
+            <div class="deadlines">
+                <h2>Дедлайны</h2>
+                <div class="deadline-form">
+                    <input type="text" id="deadline-name" placeholder="Название дедлайна">
+                    <input type="datetime-local" id="deadline-date">
+                    <button id="add-deadline">Добавить</button>
+                </div>
+                <div id="deadline-list"></div>
+            </div>
+
+            <div class="results">
+                <h2>Ведомости</h2>
+                <li><a href="https://docs.google.com/spreadsheets/d/1DwOhN0JpuUK3i0Zg4rag6J_vBQYGrzjdNWJ20UCTuI8/edit?gid=1912560175#gid=1912560175" target="_blank" class="material-link">Алгосы</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1HqlJMTNrFvMSbZN0lCGwiPiqvB1QR5N2Ola2kEP8gfg/edit?gid=0#gid=0" target="_blank" class="material-link">Дискра</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1H6KX7RjUtoFQQmObNk2b9i2EnXfLiF8H8YGTdTYuL0s/edit?gid=667498358#gid=667498358" target="_blank" class="material-link">Прога</a></li>
+                <li><a href="" target="_blank" class="material-link">АрхЭВМ</a></li>
+            </div>
+        </section>
+
+        <section id="math" class="tab-content">
+            <div class="math-content">
+                <div class="team-info">
+                    <p>Лектор: <strong>Ржонсницкая Юлия Борисовна</strong></p>
+                    <p>Практик: <strong>Цай Нонна Викторовна</strong></p>
+                </div>
+        
+                <div class="contact-info">
+                    <p><a href="https://t.me/+LaTte65suFdmZmI6" target="_blank">Telegram: Математика М3110-М3114</a></p>
+                </div>
+        
+                <div class="materials">
+                    <h3><a href="https://drive.google.com/drive/folders/1WXJV0zszgVPy6Wr0tyAslCmGqZhmPP7D" target="_blank" class="section-title">Материалы</a></h3>
+                </div>
+        
+                <div class="tests">
+                    <h3 class="section-title">Контрольные работы</h3>
+                    <!-- <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://sort-me.org/contest/246?code=2kQZnaLwvts3npoqutjw" target="_blank" class="material-link">Лабораторная №1</a></li>
+                    </ul>
+                    -->
+                </div>
+
+                <div class="assigments">
+                    <h3 class="section-title">Домашние работы</h3>
+                    <!-- <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://sort-me.org/contest/246?code=2kQZnaLwvts3npoqutjw" target="_blank" class="material-link">Лабораторная №1</a></li>
+                    </ul>
+                    -->
+                </div>
+
+                <div class="tipoviki">
+                    <h3 class="section-title">Типовые рассчёты</h3>
+                    <!-- <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://sort-me.org/contest/246?code=2kQZnaLwvts3npoqutjw" target="_blank" class="material-link">Лабораторная №1</a></li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+        </section>
+
+        <section id="algorithms" class="tab-content">
+            <div class="algorithms-content">
+                <div class="team-info">
+                    <p>Лектор: <strong>Ткаченко Данил Михайлович</strong></p>
+                    <p>Практик: <strong>Тихомирова Анастасия</strong></p>
+                    <p>Ментор: <strong>Гоша</strong></p>
+                </div>
+        
+                <div class="contact-info">
+                    <p><a href="https://t.me/+Nyn6fqks4vwxZTgy" target="_blank">Telegram: алгосики 14 группа</a></p>
+                    <p><a href="https://t.me/algodminfo" target="_blank">Telegram: Алго & ДМ инфо</a></p>
+                    <p><a href="https://discord.com/invite/dmplusalgo" target="_blank">Discord: ДМ+Алго</a></p>
+                </div>
+        
+                <div class="materials">
+                    <h3><a href="https://dm-aisd.yonote.ru/share/itmo_dm_aisd" target="_blank" class="section-title">Материалы</a></h3>
+                    <ul class="materials-list" style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://dm-aisd.yonote.ru/share/itmo_aisd_lections" target="_blank" class="material-link">Лекции</a></li>
+                    </ul>
+                </div>
+        
+                <div class="labs">
+                    <h3 class="section-title">Лабораторные</h3>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://sort-me.org/contest/246?code=2kQZnaLwvts3npoqutjw" target="_blank" class="material-link">Лабораторная №1</a></li>
+                    </ul>
+                </div>
+        
+                <!-- <div class="topics">
+                    <p><a href="#">Список тем для подготовки к теормину.</a></p>
+                    <p><a href="#">Контрольная точка. Проходной балл 8 из 10.</a></p>
+                </div>
+        
+                <div class="sign-up">
+                    <p><a href="#">Таблица записи на теормин (оставляем комментарий в виде ФИ, группа, ник ТГ)</a></p>
+                </div>
+                -->
+            </div>
+        </section>        
+
+        <section id="discrete" class="tab-content">
+            <div class="discrete-content">
+                <div class="team-info">
+                    <p>Лектор: <strong>Страдина Марина Владимировна</strong></p>
+                    <p>Практик: <strong>кусайкина Елизавета Николаевна</strong></p>
+                    <p>Менторы: <strong>Пивнев Захар, Миронова Оля</strong></p>
+                </div>
+        
+                <div class="contact-info">
+                    <p><a href=" " target="_blank">Telegram: DM M3114(в работе)</a></p>
+                    <p><a href="https://t.me/algodminfo" target="_blank">Telegram: Алго & ДМ инфо</a></p>
+                    <p><a href="https://discord.com/invite/dmplusalgo" target="_blank">Discord: ДМ+Алго</a></p>
+                </div>
+        
+                <div class="materials">
+                    <h3><a href="https://dm-aisd.yonote.ru/share/itmo_dm_aisd" target="_blank" class="section-title">Материалы</a></h3>
+                    <ul class="materials-list" style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://drive.google.com/drive/folders/11hX0RXA3ZuPFNcqtzJxtprtv9p_PlHKm" target="_blank" class="material-link">Лекции</a></li>
+                    </ul>
+                </div>
+                
+                <div class="practicss">
+                    <h3><a href="https://drive.google.com/drive/folders/11hX0RXA3ZuPFNcqtzJxtprtv9p_PlHKm" target="_blank" class="material-link">Практики ДМ 24-25</a></h3>
+                    <ul class="materials-list" style="list-style-type: disc; padding-left: 20px;">
+                    </ul>
+                </div>
+
+                <!-- <div class="topics">
+                    <p><a href="#">Список тем для подготовки к теормину.</a></p>
+                    <p><a href="#">Контрольная точка. Проходной балл 8 из 10.</a></p>
+                </div>
+        
+                <div class="sign-up">
+                    <p><a href="#">Таблица записи на теормин (оставляем комментарий в виде ФИ, группа, ник ТГ)</a></p>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <section id="programming" class="tab-content">
+            <div class="proga-content">
+                <div class="team-info">
+                    <p>Лектор: <strong>Фадеев Сергей Викторович</strong></p>
+                    <p>Практик: <strong>Хегай Максим Вилорьевич</strong></p>
+                </div>
+
+                <div class="contact-info">
+                    <p><a href="https://t.me/ITMO_CPP_24_25_News" target="_blank">Telegram: ITMO C++ 24/25 News (новостной канал)</a></p>
+                    <p><a href="https://t.me/ITMO_CPP_24_25" target="_blank">Telegram: ITMO C++ 24/25 (обсуждение)</a></p>
+                    <p><a href="https://discord.com/invite/awesome-cpp" target="_blank">Discord: awesome-cpp</a></p>
+                </div>
+        
+                <div class="materials">
+                    <p><a href="https://github.com/lectures" target="_blank">GitHub: Лекции</a></p>
+                </div>
+
+                <div class="request">
+                    <p><a href="https://example.com/code-review" target="_blank">Заявка на code review</a></p>
+                </div>
+
+                
+                <div class="labs">
+                    <h3 class="section-title">Лабораторные</h3>
+                    <!--<ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://sort-me.org/contest/246?code=2kQZnaLwvts3npoqutjw" target="_blank" class="material-link">Лабораторная №1</a></li>
+                    </ul>
+                -->
+                </div>
+        
+                <div class="topics">
+                    <p><a href="https://google.github.io/styleguide/cppguide.html" target="_blank">Google C++ Style Guide</a></p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="arch" class="tab-content">
+            <div class="arch-content">
+                <div class="team-info">
+                    <p>Лектор, практик: <strong>Повышев Владислав Вячеславович</strong></p>
+                </div>
+                <div>
+                    <h2>Это пока неоткрытый покемон</h2>
+                </div>
+            </div>
+        </section>
+        
+        <section id="special" class="tab-content">
+            <div class="special-content">
+                <div class="team-info">
+                    <p>Лектор: <strong>Ржонсницкая Юлия Борисовна</strong></p>
+                    <p>Практик: <strong>Цай Нонна Викторовна</strong></p>
+                </div>
+        
+                <div class="contact-info">
+                    <p><a href="https://t.me/+LaTte65suFdmZmI6" target="_blank">Telegram: Математика М3110-М3114</a></p>
+                </div>
+        
+                <div class="materials">
+                    <h3><a href="https://drive.google.com/drive/folders/1WXJV0zszgVPy6Wr0tyAslCmGqZhmPP7D" target="_blank" class="section-title">Материалы</a></h3>
+                </div>
+        
+                <div class="tests">
+                    <h3 class="section-title">Контрольные работы</h3>
+                    <!-- <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://sort-me.org/contest/246?code=2kQZnaLwvts3npoqutjw" target="_blank" class="material-link">Лабораторная №1</a></li>
+                    </ul>
+                    -->
+                </div>
+
+                <div class="assigments">
+                    <h3 class="section-title">Домашние работы</h3>
+                    <!-- <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://sort-me.org/contest/246?code=2kQZnaLwvts3npoqutjw" target="_blank" class="material-link">Лабораторная №1</a></li>
+                    </ul>
+                    -->
+                </div>
+
+                <div class="tipoviki">
+                    <h3 class="section-title">Типовые рассчёты</h3>
+                    <!-- <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li><a href="https://sort-me.org/contest/246?code=2kQZnaLwvts3npoqutjw" target="_blank" class="material-link">Лабораторная №1</a></li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #3498db;  /* Синий цвет */
+    --border-color: #e0e0e0;
+    --card-bg: #f8f9fa;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --primary-color: #3498db; /* Синий цвет для темной темы */
+    --border-color: #2d2d2d;
+    --card-bg: #2d2d2d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.main-page * {
+    box-sizing: content-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Хедер */
+header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 0.5rem;
+}
+
+/* Навигация */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Главная страница */
+#home {
+    box-sizing: content-box; /* Убираем box-sizing: border-box для главной страницы */
+}
+
+/* Дедлайны и немного результаты*/
+.deadlines, .results {
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    box-sizing: border-box;
+}
+
+.deadlines h2, .results h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.deadline-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.deadline-form input {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    flex: 1;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.deadline-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.deadline-form button:hover {
+    opacity: 0.9;
+}
+
+/*#deadline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}*/
+
+#deadline-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.deadline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s;
+}
+
+.deadline-item span {
+    font-weight: bold;
+}
+
+.deadline-item button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.deadline-item button:hover {
+    opacity: 0.9;
+}
+
+.results li {
+    margin-bottom: 1rem;
+}
+
+.results a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.results a:hover {
+    text-decoration: underline;
+}
+
+/* Вкладки */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    transition: none; /* Убираем плавные переходы */
+}
+
+/* Оформление всех вкладок */
+.tab-content:not(#home) {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+}
+
+/* Стили для всех ссылок */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.contact-info a, .materials a, .labs a {
+    color: var(--primary-color); /* Синие ссылки */
+}
+
+.materials a:hover {
+    color: var(--primary-color);
+}
+
+/* Стили для ссылок в секции labs */
+.labs a {
+    color: var(--primary-color);
+}
+
+.labs a:hover {
+    color: var(--primary-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+        flex-wrap: wrap;
+    }
+}
