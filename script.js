@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         target.classList.add('active');
         
         // Обновляем URL без перезагрузки страницы
-        history.pushState({ tab: targetId }, "", `#${targetId}`);
+        history.pushState({ tab: targetId }, "");
     }
 
     // Переключение темы
