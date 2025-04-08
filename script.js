@@ -119,4 +119,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(updateDeadlines, 1000);
     updateDeadlines();
+
+    //checkbox для архэвм
+    function addCheckboxes(listId) {
+        const list = document.getElementById(listId);
+        if (!list) return;
+
+        const items = list.querySelectorAll("li");
+
+        items.forEach((item) => {
+            const link = item.querySelector("a");
+            if (!link) return;
+
+            const url = link.href;
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.className = "link-checkbox";
+
+            const savedState = localStorage.getItem(url);
+            if (savedState === "true") {
+                checkbox.checked = true;
+            }
+
+            checkbox.addEventListener("change", () => {
+                localStorage.setItem(url, checkbox.checked);
+            });
+
+            item.insertBefore(checkbox, link);
+        });
+    }
+
+    addCheckboxes("labs-list");
 });
